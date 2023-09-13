@@ -48,9 +48,6 @@
 
 // // galleryThumbs.controller.control =  galleryMain;
 // galleryMain.controller.control =  galleryThumbs;
-
-
-
 $('.product-card__slider').each(function () {
   var galleryThumbs;
   var galleryMain;
@@ -110,3 +107,13 @@ $('.product-card__slider').each(function () {
   // // galleryThumbs.controller.control = galleryMain;
   galleryMain.controller.control = galleryThumbs;
 });
+
+function modalMap() {
+    event.preventDefault();
+    $.fancybox.open({
+      src: "#modal-map",
+      type: "inline",
+    //   slideClass: "myClass",
+      baseClass: "modal-map__wrap",
+    });
+  }

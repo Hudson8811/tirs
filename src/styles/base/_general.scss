@@ -5,13 +5,14 @@ h1, h2, h3, h4, h5, h6, ul {
 html,
 body {
 	height: 100%;
+    font-family: $mainFont;
+    box-sizing: border-box;
 }
 body{
     display: flex;
     flex-direction: column;
 	min-height: 100%;
-    font-family: $mainFont;
-    box-sizing: border-box;
+
 }
 .site-main{
     width: 100%;
@@ -76,6 +77,29 @@ body{
             margin-bottom: 40px;
         }
         &__name {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-flow: column nowrap;
+
+            &__row {
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                flex-flow: row nowrap;
+                margin-bottom: 9px;
+                @media (max-width: 1100px) {
+                    flex-flow: column nowrap;
+                    align-items: flex-start;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+
             @include max(md) {
                margin-bottom: 40px;
             }
@@ -85,10 +109,36 @@ body{
                 font-size: 56px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 135%;
+                line-height: 1;
+                @media (max-width: 1100px) {
+                    margin-bottom: 10px;
+                }
                 @include max(md) {
                     font-size: 40px;
                 } 
+            }
+            &__link {
+                position: relative;
+                display: block;
+                margin-left: 45px;
+                cursor: pointer;
+                color: #3C5D79;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%; /* 36px */
+                text-decoration-line: underline;
+                transition: all .3s;
+                @media (max-width: 1100px) {
+                    margin-left: 0;
+                }
+                @include max(md) {
+                    font-size: 18px;
+                }
+                &:hover {
+                    transition: all .3s;
+                    color: #454554;
+                }         
             }
 
             &__adress {
@@ -335,5 +385,64 @@ body{
     &:hover {
         transition: all .3s;
         background: lighten( #3C5D79, 20%);
+    }
+}
+#modal-map {
+    width: 90vw;
+    max-width: 1642px;
+    height: 80vh;
+    padding: 30px;
+    border-radius: 15px;
+    @include max(sm) {
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .fancybox-button {
+        top:50px;
+        right: 50px;
+        background: #fff;
+        border-radius: 15px;
+        opacity: 1;
+        @include max(sm) {
+            top: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    }
+}
+.modal-map {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    &__wrap {
+        @include max(sm) {
+            width: 100vw;
+            height: 100vh;
+            padding: 0;
+        }
+        .fancybox-slide {
+            @include max(sm) {
+                width: 100vw;
+                height: 100vh;
+                padding: 0;
+            }
+        }
+    }
+    img {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
     }
 }

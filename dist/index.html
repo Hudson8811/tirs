@@ -31,8 +31,12 @@
         <div class="container">
           <div class="hotel__top">
             <div class="hotel__top__name">
-              <div class="hotel__top__name__title">ОТЕЛЬ ТИРС</div>
-              <div class="hotel__top__name__adress">Россия, Тверская область, г. Кирмы, д. Бурцево</div>
+              <div class="hotel__top__name__row">
+                <div class="hotel__top__name__title">ЭКО-ОТЕЛЬ ТИРС</div><a class="hotel__top__name__link" href="https://kolkunovo.ru/o-kurorte/tirs/">Подробнее об отеле</a>
+              </div>
+              <div class="hotel__top__name__row">
+                <div class="hotel__top__name__adress">Россия, Тверская область, г. Кирмы, д. Бурцево</div>
+              </div>
             </div>
             <div class="hotel__top__reserve">
               <div class="hotel__top__reserve__cost">От <span>18 500 ₽</span>/ 2 чел.
@@ -188,10 +192,12 @@
             </div>
             <div class="hotel__specification__col">
               <div class="hotel__map">
-                <div class="hotel__map__picture"><img src="img/index/map.png" alt=""></div>
-                <div class="btn hotel__map__button">ПОКАЗАТЬ НА КАРТЕ</div>
+                <div class="hotel__map__picture"><img src="img/index/map.png" alt=""><a href="javascript:;" onclick="modalMap(); return false;" class="btn hotel__map__button fancybox">ПОКАЗАТЬ НА КАРТЕ</a></div>
               </div>
             </div>
+          </div>
+          <div id="modal-map" style="display:none">
+            <div class="modal-map"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1bb43848e08ba629b394d976cebe45d012c22e151e2484923bde725ad02fdbd5&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe></div>
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@
 @@include("./import/main.js")
 @@include("./libs/swiper-bundle.min.js")
 @@include("./libs/select2.min.js") 
+@@include("./libs/jquery.fancybox.min.js") 
 
 @@include("./import/components.js")
 @@include("./import/modules.js")
