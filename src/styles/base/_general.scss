@@ -257,6 +257,8 @@ body{
                     max-width: calc( 100% - 0px);
                     margin-left: 0px;
                     margin-bottom: 40px;
+                    max-height: 400px;
+                    height: 400px;
                 }
             }
         }
@@ -397,27 +399,28 @@ body{
     }
 }
 #modal-map {
-    width: 90vw;
+    width: 95vw;
     max-width: 1642px;
     height: 80vh;
     padding: 30px;
-    border-radius: 15px;
+    padding-top: 50px;
+    background: transparent;
     @include max(sm) {
         width: 100vw;
-        height: 100vh;
-        padding: 0;
-        border-radius: 0;
+        height: 95vh;
+        padding: 0px;
+        padding-top: 40px;
     }
 
     .fancybox-button {
-        top:50px;
-        right: 50px;
+        top: 0px;
+        right: 30px;
         background: #fff;
         border-radius: 15px;
         opacity: 1;
         @include max(sm) {
-            top: 15px;
-            right: 15px;
+            top: 0px;
+            right: 7px;
             width: 30px;
             height: 30px;
             border-radius: 5px;
@@ -432,6 +435,12 @@ body{
     align-items: center;
     width: 100%;
     height: 100%;
+    background: #FFF;
+    padding: 30px;
+    border-radius: 15px;
+    @include max(sm) {
+        padding: 0;
+    }
     &__wrap {
         @include max(sm) {
             width: 100vw;
@@ -454,4 +463,7 @@ body{
         object-fit: cover;
         object-position: center center;
     }
+}
+[class*="copyrights-pane"] {
+    display: none !important;
 }
