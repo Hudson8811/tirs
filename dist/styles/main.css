@@ -3072,6 +3072,7 @@ body {
   justify-content: space-between;
   align-items: stretch;
   width: 100%;
+  margin-bottom: 78px;
 }
 
 .hotel__specification__col {
@@ -3083,7 +3084,15 @@ body {
 }
 
 .hotel__specification__col:nth-child(1) {
-  width: 40.42%;
+  width: 40.49%;
+}
+
+.hotel__specification__col:nth-child(2) {
+  width: 19.24%;
+}
+
+.hotel__specification__col:nth-child(3) {
+  width: 28.07%;
 }
 
 .hotel__list {
@@ -3596,6 +3605,7 @@ body {
     margin-left: 0px;
     width: calc(100% + 0px);
     flex-flow: row wrap;
+    margin-bottom: 0;
   }
 
   .hotel__specification__col:nth-child(1) {

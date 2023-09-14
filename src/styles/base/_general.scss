@@ -191,6 +191,7 @@ body{
         justify-content: space-between;
         align-items: stretch;
         width: 100%;
+        margin-bottom: 78px;
         @media (max-width: 1700px) {
             margin-left: -40px;
             width: calc(100% + 40px);
@@ -200,6 +201,7 @@ body{
             margin-left: 0px;
             width: calc(100% + 0px);
             flex-flow: row wrap;
+            margin-bottom: 0;
         }
         &__col {
             position: relative;
@@ -208,7 +210,7 @@ body{
             justify-content: flex-start;
             align-items: flex-start;
             &:nth-child(1) {
-                width: 40.42%;
+                width: 40.49%;
                 @media (max-width: 1700px) {
                     flex: 0 0 50%;
                     max-width: calc( 50% - 40px);
@@ -223,6 +225,7 @@ body{
                 }
             }
             &:nth-child(2) {
+                width: 19.24%;
                 @media (max-width: 1700px) {
                     flex: 0 0 50%;
                     max-width: calc( 50% - 40px);
@@ -237,6 +240,7 @@ body{
                 }
             }
             &:nth-child(3) {
+                width: 28.07%;
                 @media (max-width: 1700px) {
                     flex: 0 0 100%;
                     max-width: calc( 100% - 0px);

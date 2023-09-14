@@ -17,7 +17,7 @@ block content
 				.hotel__top__reserve
 					.hotel__top__reserve__cost
 						!="От <span>18 500 ₽</span>/ 2 чел."
-					.btn.hotel__top__reserve__button ЗАБРОНИРОВАТЬ
+					a(href="#booking_iframe").btn.hotel__top__reserve__button ЗАБРОНИРОВАТЬ
 			.hotel__slider.product-card
 				include ../blocks/modules/product-card-slider/product-card-slider
 			.hotel__specification
@@ -113,11 +113,12 @@ block content
 				.hotel__specification__col
 					.hotel__map
 						.hotel__map__picture
-							img(src="img/index/map.png", alt="")
+							img(src="img/index/map--2.jpg", alt="")
 							<a href="javascript:;" onclick="modalMap(); return false;" class="btn hotel__map__button fancybox">ПОКАЗАТЬ НА КАРТЕ</a>
-			#modal-map(style="display:none")
-				.modal-map
-					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1bb43848e08ba629b394d976cebe45d012c22e151e2484923bde725ad02fdbd5&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+			#booking_iframe
+	#modal-map(style="display:none")
+		.modal-map
+			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1bb43848e08ba629b394d976cebe45d012c22e151e2484923bde725ad02fdbd5&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
 block scripts
 	script(src="js/main.js")
 	script(src="https://widget.reservationsteps.ru/iframe/library/dist/booking_iframe.js")
