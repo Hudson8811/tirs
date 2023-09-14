@@ -104,6 +104,8 @@ $('.product-card__slider').each(function () {
           watchSlidesVisibility: true,
           watchSlidesProgress: true,
           direction: 'horizontal',
+          centeredSlides: false,
+            centeredSlidesBounds: false,
           spaceBetween: 20,
           navigation: {
               nextEl: ".gallery-thumbs-next",
@@ -127,7 +129,6 @@ $('.product-card__slider').each(function () {
           watchSlidesProgress: true,
           preventInteractionOnTransition: true,
           slidesPerView: 1,
-
           thumbs: {
               swiper: galleryThumbs
           },
@@ -143,10 +144,10 @@ $('.product-card__slider').each(function () {
           //     },
           // }
       })
-      // galleryMain.controller.control = galleryThumbs;
+    //   galleryMain.controller.control = galleryThumbs;
   });
 
-  // // galleryThumbs.controller.control = galleryMain;
+//   galleryThumbs.controller.control = galleryMain;
   galleryMain.controller.control = galleryThumbs;
 });
 
