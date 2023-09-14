@@ -7,6 +7,7 @@ body {
 	height: 100%;
     font-family: $mainFont;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
     display: flex;
@@ -173,6 +174,9 @@ body{
                     margin-right: 10px;
                     margin-left: 10px;                    
                 }
+            }
+            &__button {
+                text-decoration: none;
             }
         }
 
@@ -361,6 +365,7 @@ body{
             background: #FFF;
             color: #15222B;
             width: calc(100% - 60px);
+            text-decoration: none;
         }
       
     }

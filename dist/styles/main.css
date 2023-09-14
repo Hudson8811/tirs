@@ -2935,6 +2935,7 @@ body {
   height: 100%;
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -3056,6 +3057,10 @@ body {
   font-size: 24px;
   margin-right: 10px;
   margin-left: 10px;
+}
+
+.hotel__top__reserve__button {
+  text-decoration: none;
 }
 
 .hotel__slider {
@@ -3209,6 +3214,7 @@ body {
   background: #FFF;
   color: #15222B;
   width: calc(100% - 60px);
+  text-decoration: none;
 }
 
 .btn {
