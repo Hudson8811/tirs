@@ -115,8 +115,25 @@ block content
 						.hotel__map__picture
 							img(src="img/index/map.png", alt="")
 							<a href="javascript:;" onclick="modalMap(); return false;" class="btn hotel__map__button fancybox">ПОКАЗАТЬ НА КАРТЕ</a>
-
-
 			#modal-map(style="display:none")
 				.modal-map
 					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1bb43848e08ba629b394d976cebe45d012c22e151e2484923bde725ad02fdbd5&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+block scripts
+	script(src="js/main.js")
+	script(src="https://widget.reservationsteps.ru/iframe/library/dist/booking_iframe.js")
+	script.
+		var BookingIframe = new BookingIframe({
+			html_id: 'booking_iframe',
+			uid: '158f3e45-52c7-4842-9352-c2bbf852aa26',
+			lang: 'ru',
+			width: 'auto',
+			height: 'auto',
+			rooms: '',
+			scroll_to_rooms: '0',
+			dfrom: null,
+			dto: null		})
+		BookingIframe.init()
+
+
+
+
